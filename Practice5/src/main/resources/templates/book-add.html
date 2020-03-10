@@ -1,0 +1,25 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Book Control: GET</title>
+</head>
+<body>
+<h1>Add book to base:</h1>
+<form action="#" th:action="@{/book-add}" th:object="${bookModel}" method="post">
+    <br/>
+    <label>Name:
+        <input type="text" th:field="*{name}">
+    </label>
+    <br/>
+    <label>ISBN:
+        <input type="text" th:field="*{isbn}"/>
+    </label>
+    <br/>
+    <label>Author:
+        <input type="text" th:field="*{author}"/>
+    </label>
+    <br/>
+    <button type="submit">Send</button>
+</form>
+
+</body>
+</html>
